@@ -48,20 +48,60 @@ function dataNacimento(obj){
     return 2020 - obj.idade;
 }
 
+// (function Imprimi(obj){
+//     console.log("Projeto Petshop");
+//     console.log("------------------------------------------")
+//     obj.forEach(element => {
+//         console.log("nome:" + element.nome);
+//         console.log("raca:" + element.raca);
+//         console.log("idade:" + element.idade);
+//         console.log("genero:" + ((element.genero==='masculino')?"M":"F"));
+//         console.log("tipo:" + element.tipo);
+//         console.log("vacinado:" + ((element.vacinado===true)?"Sim":"Não"));
+//         console.log("servicos:" + element.servicos);
+//         console.log("------------------------------------------")
+//     });
+// })(pet)
+
 (function Imprimi(obj){
     console.log("Projeto Petshop");
     console.log("------------------------------------------")
-    obj.forEach(element => {
-        console.log("nome:" + element.nome);
-        console.log("raca:" + element.raca);
-        console.log("idade:" + element.idade);
-        console.log("genero:" + ((element.genero==='masculino')?"M":"F"));
-        console.log("tipo:" + element.tipo);
-        console.log("vacinado:" + ((element.vacinado===true)?"Sim":"Não"));
-        console.log("servicos:" + element.servicos);
+    let index = 0;
+    while(true){
+        index = index + 1;        
+        console.log("nome:" + obj[index - 1].nome);
+        console.log("raca:" + obj[index - 1].raca);
+        console.log("idade:" + obj[index - 1].idade);
+        console.log("genero:" + ((obj[index - 1].genero==='masculino')?"M":"F"));
+        console.log("tipo:" + obj[index - 1].tipo);
+        console.log("vacinado:" + ((obj[index - 1].vacinado===true)?"Sim":"Não"));
+        console.log("servicos:" + obj[index - 1].servicos);
         console.log("------------------------------------------")
-    });
+        if(index >=  obj.length){
+            break
+        }
+    }
 })(pet)
+
+function adicionaPet(novoPet, pet){
+    pet.push(novoPet);
+}
+
+let novopet = {
+    "nome": "Atiki",
+    "raca": "hotwaile",
+    "idade": 5,
+    "genero": "feminino",
+    "tipo": "cao",
+    "vacinado": false,
+    "servicos": ["banho", "tosa", "corte"]
+}
+
+adicionaPet(novopet, pet);
+
+
+
+
 
 function Vacina(obj){
     if (!obj.vacinado){
@@ -74,10 +114,9 @@ function Vacina(obj){
     //return obj;
 }
 
-// pet.forEach(element => {
-//     Vacina(element)
-//     console.log(element)
-// });
+pet.forEach(element => {
+     console.log(element)
+});
 
 // pet.forEach(element => {
 //     Vacina(element)
