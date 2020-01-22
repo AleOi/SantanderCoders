@@ -1,3 +1,7 @@
+// Lembrar que o objeto ele pode ser afetado pela
+// função
+
+
 const express = require("express")
 // // Iniciando com a variável for
 // let array = [1,2,3];
