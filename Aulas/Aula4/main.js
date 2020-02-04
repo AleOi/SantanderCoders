@@ -3,7 +3,7 @@
 // Ex: 2016-01-14T16:30:22-03:00
 const { convertJson } = require('./utils/Json');
 const { adicionaPet, 
-    dataNacimento, 
+    dataNascimento, 
     Imprimi, Vacina,
     darEntradaPets,
     buscaPeloNome, castrarPet
@@ -22,7 +22,10 @@ const convertImprimivel = (element) => {
 }
 
 (function main(){
+    /*-----------------------Convert JSON---------------------------------- */    
     convertedJson = convertJson(json);
+
+    /*-----------------------Edit convertedJson------------------------------*/    
     let novopet = {
         "nome": "Atiki",
         "raca": "hotwaile",
@@ -35,9 +38,11 @@ const convertImprimivel = (element) => {
     };
     adicionaPet(novopet, convertedJson);
     //const resultado = darEntradaPets(convertImprimivel, convertedJson);
-    //const resultado = darEntradaPets(convertImprimivel, json);
+    const resultado = darEntradaPets(convertImprimivel, json);
     //const petBusca = buscaPeloNome("Rep", convertedJson );
     const petCastrado = castrarPet(convertedJson);
+
+    /*-----------------------Print---------------------------------- */    
     Imprimi(convertImprimivel, petCastrado);
     
 })();
