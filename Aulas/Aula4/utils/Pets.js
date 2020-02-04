@@ -68,6 +68,24 @@ const darEntradaPets = (convertImprimivel, listaPets) =>{
     }
     
 }
+
+const buscaPeloNome = (trecho, obj) =>{
+    const Filtro = obj.filter((element) =>{
+        return (element.nome.toLowerCase().indexOf(trecho.toLowerCase()) >= 0)? true: false;
+    });
+    return Filtro;
+}
+
+const castrarPet = (obj) =>{
+    const petCastrado = obj.map((element)=>{
+        (element.servicos.indexOf("castrado") >= 0)?console.error(element.nome + "Pet ja castrado"):
+            element.servicos.push("castrado");
+        return element;
+    })
+    return petCastrado;
+}
+
 module.exports = {dataNacimento, 
     adicionaPet, Vacina, 
-    Imprimi, darEntradaPets};
+    Imprimi, darEntradaPets,
+    buscaPeloNome, castrarPet}; 

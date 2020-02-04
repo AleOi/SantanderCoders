@@ -4,6 +4,6 @@ const convertJson = (json) => {
         element.dataNascimento = new Date(element.dataNascimento)
         return element;
     })
-    return Obj
+    return Obj;
 }
 module.exports = { convertJson }
