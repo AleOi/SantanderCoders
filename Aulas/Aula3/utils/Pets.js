@@ -36,7 +36,7 @@ const darEntradaPets = (listaPets) =>{
         return Vacina(element)
     })
     Imprimi(petVacinado);
-    console.log("Pets foram vacinados com sucesso")
+    //console.log("Pets foram vacinados com sucesso")
     return petVacinado;
 }
 module.exports = {dataNacimento, 
