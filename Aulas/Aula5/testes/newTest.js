@@ -42,3 +42,5 @@ let maior50000000 = cidades.map((city) => {
 
 
 console.log("Novo teste")
+
+console.log("Novo teste para verificar uso de tags")
