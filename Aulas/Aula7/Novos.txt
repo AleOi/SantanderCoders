@@ -1,0 +1,5 @@
+DevDependencies são dependeências que não serão upadas no momento 
+da produção
+
+
+
